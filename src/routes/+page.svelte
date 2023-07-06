@@ -5,11 +5,12 @@ let css = "";
 
 function convert ()
 {
-
+    let parser = new CSSParser();
+    let sheet = parser.parse(css, false, true);
+    console.log(sheet);
 }
 
 </script>
-
 
 <section class="py-16">
     <div class="container mx-auto flex flex-col gap-6">
@@ -19,6 +20,6 @@ function convert ()
             <textarea class="border w-1/2 p-2 outline-none" bind:value={html} cols="30" rows="10" placeholder="Write HTML here"></textarea>
             <textarea class="border w-1/2 p-2 outline-none" bind:value={css} cols="30" rows="10" placeholder="Write CSS here"></textarea>
         </div>
-        <button class="px-6 py-3 bg-slate-600 text-white mx-auto text-xl rounded">Convert</button>
+        <button on:click={convert} class="px-6 py-3 bg-slate-600 text-white mx-auto text-xl rounded">Convert</button>
     </div>
 </section>
