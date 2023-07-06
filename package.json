@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"css-to-tailwind-translator": "^1.2.3",
 		"jscssp": "^0.5.0"
 	}
 }
