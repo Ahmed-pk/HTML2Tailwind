@@ -16,7 +16,12 @@ function convert ()
     
     conversionResult.data.map( (element) => {
         Array.from(parsedHtml.querySelectorAll(element.selectorName)).map(ele => {
-            ele.classList.add(element.resultVal);
+            try {
+                
+                ele.classList.add(element.resultVal.replace(" ", ","));
+            } catch (error) {
+                
+            }
         });
     });
 
