@@ -16,9 +16,8 @@ function convert ()
     
     conversionResult.data.map( (element) => {
         Array.from(parsedHtml.querySelectorAll(element.selectorName)).map(ele => {
-            try {
-                
-                ele.classList.add(element.resultVal.replace(" ", ","));
+            try {     
+                ele.classList.add(...element.resultVal.split(" "));
             } catch (error) {
                 
             }
