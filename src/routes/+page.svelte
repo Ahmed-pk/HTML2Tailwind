@@ -1,19 +1,22 @@
 <script>
-import { CssToTailwindTranslator } from "css-to-tailwind-translator";
 
-let html = "";
-let css = "";
+// Using css-to-tailwind-translator 
+import { CssToTailwindTranslator } from "css-to-tailwind-translator";
 
 let output = "";
 
+let html = "";
+
+let css = "";
+
+// Function to convert css to tailwindcss
 function convert ()
 {
     let conversionResult = CssToTailwindTranslator(css, {useAllDefaultValues: true});
     
     let parser = new DOMParser();
     let parsedHtml = parser.parseFromString(html, 'text/html');
-
-    
+  
     conversionResult.data.map( (element) => {
         Array.from(parsedHtml.querySelectorAll(element.selectorName)).map(ele => {
             try {     
