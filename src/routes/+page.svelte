@@ -9,6 +9,12 @@ let html = "";
 
 let css = "";
 
+// next plan:
+// 1. fetch html and css from live website and convert it to tailwind using function written below
+// 2. remove old classes
+// 3. Remove all extra attributes on tag
+// 4. Remove all extra attributes on tag
+
 // Function to convert css to tailwindcss
 function convert ()
 {
